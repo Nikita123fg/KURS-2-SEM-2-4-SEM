@@ -1,0 +1,31 @@
+public class Main {
+    public static void main(String[] args) {
+        int result1 = sum(5, 10);
+        System.out.println("Сумма 5 и 10: " + result1);
+        
+        int result2 = sum(3, 7, 12);
+        System.out.println("Сумма 3, 7 и 12: " + result2);
+        
+        System.out.println("Число 8 чётное? " + isEven(8));
+        System.out.println("Число 15 чётное? " + isEven(15));
+        
+        printMessage("Hello, World!");
+        printMessage("Работа методов завершена");
+    }
+    
+    public static int sum(int a, int b) {
+        return a + b;
+    }
+    
+    public static int sum(int a, int b, int c) {
+        return a + b + c;
+    }
+    
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
+    
+    public static void printMessage(String message) {
+        System.out.println(message);
+    }
+}
