@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> tasks = new ArrayList<>();
+        
+        tasks.add("Купить продукты");
+        tasks.add("Сделать домашнее задание");
+        tasks.add("Позвонить другу");
+        
+        System.out.println("Список задач:");
+        for (String task : tasks) {
+            System.out.println(task);
+        }
+        
+        tasks.remove(1);
+        
+        System.out.println("\nСписок после удаления второй задачи:");
+        for (String task : tasks) {
+            System.out.println(task);
+        }
+        
+        String searchTask = "Сделать домашнее задание";
+        if (tasks.contains(searchTask)) {
+            System.out.println("\nЗадача \"" + searchTask + "\" найдена");
+        } else {
+            System.out.println("\nЗадача \"" + searchTask + "\" не найдена");
+        }
+        
+        Collections.sort(tasks);
+        
+        System.out.println("\nОтсортированный список:");
+        for (String task : tasks) {
+            System.out.println(task);
+        }
+    }
+}
