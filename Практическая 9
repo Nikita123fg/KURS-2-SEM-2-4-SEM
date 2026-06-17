@@ -1,0 +1,27 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class ExceptionHandlingDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        try {
+            System.out.print("Введите делимое: ");
+            int num1 = scanner.nextInt();
+            
+            System.out.print("Введите делитель: ");
+            int num2 = scanner.nextInt();
+            
+            int result = num1 / num2;
+            System.out.println("Частное: " + result);
+            
+        } catch (InputMismatchException e) {
+            System.out.println("Ошибка! Необходимо ввести целое число.");
+        } catch (ArithmeticException e) {
+            System.out.println("Ошибка! Деление на ноль запрещено.");
+        } finally {
+            System.out.println("Работа программы завершена");
+            scanner.close();
+        }
+    }
+}
